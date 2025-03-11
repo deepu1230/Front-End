@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Object Example</title>
+</head>
+<body>
+
+    <h2>JSON Object Example</h2>
+    <button onclick="showDetails()">Show Details</button>
+    <p id="output"></p>
+
+    <script>
+        // Creating a JSON object
+        let person = {
+            name: "DEEPTHI",
+            age: 20,
+            city: "VIZAG"
+        };
+
+        // Function to display JSON values using dot notation
+        function showDetails() {
+            let outputText = "Name: " + person.name + "<br>" +
+                             "Age: " + person.age + "<br>" +
+                             "City: " + person.city;
+            
+            document.getElementById("output").innerHTML = outputText;
+        }
+    </script>
+
+</body>
+</html>

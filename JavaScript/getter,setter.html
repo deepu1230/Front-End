@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter with Getter and Setter</title>
+</head>
+<body>
+
+    <h2>Counter: <span id="count">0</span></h2>
+    <button onclick="counter.increment()">Count</button>
+
+    <script>
+        let counter = {
+            _count: 0, // Private variable
+
+            // Getter method to retrieve the counter value
+            get value() {
+                return this._count;
+            },
+
+            // Setter method to update the counter value
+            set value(newValue) {
+                this._count = newValue;
+                document.getElementById("count").textContent = this._count; // Update display
+            },
+
+            // Method to increment the counter
+            increment() {
+                this.value = this._count + 1; // Use setter to update the value
+            }
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For/In Loop Example</title>
+</head>
+<body>
+
+    <h2>Person Details</h2>
+    <p id="output"></p>
+    <button onclick="showDetails()">Show Details</button>
+
+    <script>
+        // Creating an object
+        let person = {
+            name: "Deepthi",
+            age: 20,
+            city: "VIZAG"
+        };
+
+        // Function to display object properties using for/in loop
+        function showDetails() {
+            let details = "";
+            
+            for (let key in person) { // Loop through object properties
+                details += key + ": " + person[key] + "<br>";
+            }
+            
+            document.getElementById("output").innerHTML = details;
+        }
+    </script>
+
+</body>
+</html>

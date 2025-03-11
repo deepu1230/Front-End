@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter with Prototype</title>
+</head>
+<body>
+
+    <h2>Counter: <span id="count">0</span></h2>
+    <button onclick="counter.increment()">Increment</button>
+    <button onclick="counter.decrement()">Decrement</button>
+    <button onclick="counter.reset()">Reset</button>
+
+    <script>
+        // Constructor function for Counter
+        function Counter() {
+            this.count = 0;
+        }
+
+        // Adding methods using prototype
+        Counter.prototype.increment = function() {
+            this.count++;
+            this.updateDisplay();
+        };
+
+        Counter.prototype.decrement = function() {
+            this.count--;
+            this.updateDisplay();
+        };
+
+        Counter.prototype.reset = function() {
+            this.count = 0;
+            this.updateDisplay();
+        };
+
+        Counter.prototype.updateDisplay = function() {
+            document.getElementById("count").textContent = this.count;
+        };
+
+        // Creating an instance of Counter
+        let counter = new Counter();
+    </script>
+
+</body>
+</html>

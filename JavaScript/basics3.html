@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Object Properties</title>
+</head>
+<body>
+
+    <h2>Person Details</h2>
+    <p id="output"></p>
+    <button onclick="showDetails()">Show Details</button>
+
+    <script>
+        // Creating an object "person"
+        let person = {
+            firstname: "deepthi",
+            lastname: "Manthri"
+        };
+
+        // Function to display properties in two different ways
+        function showDetails() {
+            let outputText = "Using dot notation: " + person.firstname + " " + person.lastname + "<br>" +
+                             "Using bracket notation: " + person["firstname"] + " " + person["lastname"];
+            
+            document.getElementById("output").innerHTML = outputText;
+        }
+    </script>
+
+</body>
+</html>
