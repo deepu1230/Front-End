@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>Viewport, Grid, Media Queries, Image, and Video</title>
+    <style>
+        /* Container Grid Setup */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .item {
+            padding: 20px;
+            text-align: center;
+            background-color: lightblue;
+        }
+
+        /* Image Styling */
+        .image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Video Styling */
+        video {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Media Query for Small Screens */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr; /* Single column layout for small screens */
+            }
+        }
+
+        /* Media Query for Large Screens */
+        @media (min-width: 1200px) {
+            .container {
+                grid-template-columns: repeat(4, 1fr); /* 4 columns for large screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="item">
+            <h3>Image</h3>
+            <img src="C:\Users\karth\OneDrive\Pictures\1.jpg" alt="Sample Image" class="image">
+        </div>
+        <div class="item">
+            <h3>Video</h3>
+            <video controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="item">
+            <h3>Content</h3>
+            <p>This is a responsive grid with an image, a video, and some content.</p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+
+<head>
+    <title>Padding, Margin, and Multiple Background Images</title>
+    <style>
+        /* Example 1: Applying Padding and Margin */
+        .box1 {
+            width: 300px;
+            height: 200px;
+            background-color: lightblue;
+            padding: 20px; /* Space inside the element */
+            margin: 30px; /* Space outside the element */
+            border: 2px solid #007BFF;
+        }
+
+        .box2 {
+            width: 300px;
+            height: 200px;
+            background-color: lightgreen;
+            padding: 10px; /* Smaller padding */
+            margin: 50px; /* Larger margin */
+            border: 2px solid #28a745;
+        }
+
+        /* Example 2: Multiple Background Images */
+        .background-images {
+            height: 500px;
+            background-image: url('https://media.istockphoto.com/id/1403500817/photo/the-craggies-in-the-blue-ridge-mountains.jpg?s=612x612&w=0&k=20&c=N-pGA8OClRVDzRfj_9AqANnOaDS3devZWwrQNwZuDSk='), url('https://images.pexels.com/photos/3680219/pexels-photo-3680219.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+            background-size: cover, contain; /* First image covers, second is contained */
+            background-position: center, center; /* Center both images */
+            background-repeat: no-repeat, no-repeat; /* No repeat for both images */
+            margin: 20px;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        /* Basic styling for the text */
+        h1 {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Additional styling */
+        .container {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Padding, Margin, and Multiple Background Images</h1>
+
+        <!-- Example 1: Two Boxes with Different Padding and Margin -->
+        <div class="box1">
+            <p>This box has more padding and less margin.</p>
+        </div>
+
+        <div class="box2">
+            <p>This box has less padding and more margin.</p>
+        </div>
+
+        <!-- Example 2: Section with Multiple Background Images -->
+        <div class="background-images">
+            <h2>Multiple Background Images</h2>
+            <p>Notice how the first image covers the entire area, and the second image is contained within the box.</p>
+        </div>
+    </div>
+
+</body>
+</html>

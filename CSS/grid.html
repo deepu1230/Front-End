@@ -1,0 +1,79 @@
+<html>>
+<head>
+    <title>CSS Grid Layouts</title>
+    <style>
+        /* Basic Grid Layout */
+        .basic-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .basic-grid div {
+            background-color: lightblue;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Grid with Different Column Sizes */
+        .different-size-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr; /* 2:1 ratio */
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .different-size-grid div {
+            background-color: lightgreen;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Grid with Named Areas */
+        .named-areas-grid {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "main sidebar"
+                "footer footer";
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .named-areas-grid div {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header { background-color: lightcoral; }
+        .main { background-color: lightgoldenrodyellow; }
+        .sidebar { background-color: lightpink; }
+        .footer { background-color: lightseagreen; }
+    </style>
+</head>
+<body>
+
+    <h3>Basic Grid</h3>
+    <div class="basic-grid">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+
+    <h3>Grid with Different Column Sizes</h3>
+    <div class="different-size-grid">
+        <div>Large Column</div>
+        <div>Small Column</div>
+    </div>
+
+    <h3>Grid with Named Areas</h3>
+    <div class="named-areas-grid">
+        <div class="header">Header</div>
+        <div class="main">Main Content</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="footer">Footer</div>
+    </div>
+
+</body>
+</html>

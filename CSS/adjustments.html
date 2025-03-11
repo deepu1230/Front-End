@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<head>
+   <title>Adjustments</title>
+    <style>
+        /* Task 1: Table with black border and hover effect */
+        table {
+            border: 2px solid black;
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        /* Task 2: Visibility and Display Properties */
+        .visibility-example {
+            margin: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .hidden-element {
+            visibility: hidden; /* Element is hidden but takes space */
+        }
+
+        .visible-element {
+            visibility: visible; /* Element is visible */
+        }
+
+        .collapsed-element {
+            visibility: collapse; /* Element is collapsed in table rows */
+        }
+
+        .display-none {
+            display: none; /* Element is not displayed */
+        }
+
+        .display-inline {
+            display: inline; /* Element is displayed as inline */
+        }
+
+        .display-block {
+            display: block; /* Element is displayed as block */
+        }
+
+        .display-contents {
+            display: contents; /* The element itself is not rendered but its content is */
+        }
+
+        .display-list-item {
+            display: list-item; /* Element is displayed as list item */
+        }
+
+        /* Task 3: Smooth Scroll Behavior */
+        html {
+            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+        }
+
+        /* Additional styles for scroll links */
+        .scroll-link {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .scroll-link:hover {
+            background-color: #45a049;
+        }
+
+        /* Padding for bottom of the page */
+        .page-content {
+            height: 1500px; /* Make the page long enough to scroll */
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Task 3: Links for scrolling to top and bottom -->
+    <a href="#bottom" class="scroll-link">Click to go to bottom of page</a>
+
+    <div class="page-content">
+        <h1>Welcome to the Page</h1>
+        <p>This page demonstrates different CSS properties including table hover effects, visibility, display properties, and smooth scrolling.</p>
+
+        <!-- Task 2: Table with visibility and display properties -->
+        <div class="visibility-example">
+            <p class="visible-element">This element is visible.</p>
+            <p class="hidden-element">This element is hidden but still takes space.</p>
+            <p class="collapsed-element">This element is collapsed (only works in tables).</p>
+            <p class="display-none">This element is not displayed.</p>
+            <p class="display-inline">This element is inline.</p>
+            <p class="display-block">This element is block-level.</p>
+            <p class="display-contents">This element’s content is displayed, but the element itself is not.</p>
+            <p class="display-list-item">This element behaves like a list item.</p>
+        </div>
+
+        <!-- Task 1: Table with black border and hover effect -->
+        <table id="hoverTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>28</td>
+                    <td>New York</td>
+                </tr>
+                <tr>
+                    <td>Jane</td>
+                    <td>32</td>
+                    <td>Los Angeles</td>
+                </tr>
+                <tr>
+                    <td>Mark</td>
+                    <td>25</td>
+                    <td>Chicago</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Another link to scroll to the top of the page -->
+        <a href="#top" class="scroll-link">Click to go to top of page</a>
+    </div>
+
+    <!-- Target anchor at the bottom -->
+    <div id="bottom" style="height: 50px;"></div>
+
+    <script>
+        // JavaScript to change the background color of the whole page when hovering over the table
+        const table = document.getElementById("hoverTable");
+
+        table.addEventListener("mouseenter", function() {
+            document.body.style.backgroundColor = "pink"; // Change page background color to pink
+        });
+
+        table.addEventListener("mouseleave", function() {
+            document.body.style.backgroundColor = ""; // Reset background color when mouse leaves
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Multiple Background Images Example</title>
+    <style>
+        /* Page styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container with multiple background images */
+        .multiple-background {
+            height: 100vh; /* Full viewport height */
+            background-image: 
+                url('https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg'), 
+                url('https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg),
+                url('https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg'); 
+            background-size: cover, contain, 100%; /* First image covers, second contained, third stretched */
+            background-position: center, top right, bottom left; /* First image centered, second top right, third bottom left */
+            background-repeat: no-repeat, no-repeat, no-repeat; 
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="multiple-background">
+        <h1>Multiple Background Images Example</h1>
+        <p>This page has three background images with adjustable sizes and positions.</p>
+    </div>
+
+</body>
+</html>
