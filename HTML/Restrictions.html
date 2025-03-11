@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Input Restrictions</title>
+</head>
+<body bgcolor=lightgreen>
+<h2><center>Input Restrictions</center></h2>
+<hr><hr>
+<form>
+    <label for="readonly">Read-Only Field:</label>
+    <input type="text" id="readonly" name="readonly" value="Cannot Edit" readonly>
+    <br><br>
+    <label for="disabled">Disabled Field:</label>
+    <input type="text" id="disabled" name="disabled" value="Disabled" disabled>
+    <br><br>
+    <label for="maxlength">Max Length (5 characters):</label>
+    <input type="text" id="maxlength" name="maxlength" maxlength="5">
+    <br><br>
+    <label for="number">Number (Min: 10, Max: 100):</label>
+    <input type="number" id="number" name="number" min="10" max="100">
+    <br><br>
+    <label for="required">Required Field:</label>
+    <input type="text" id="required" name="required" required>
+    <br><br>
+    <label for="size">Size (Display width of 10 characters):</label>
+    <input type="text" id="size" name="size" size="10">
+    <br><br>
+    <label for="preset">Preset Value:</label>
+    <input type="text" id="preset" name="preset" value="Default Text">
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
